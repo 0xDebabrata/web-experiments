@@ -48,7 +48,11 @@ export default function Pricing({
     if (subscription) {
       return router.push('/');
     }
-    router.push(price.payment_link)
+    if (price.payment_link) {
+        router.push(price.payment_link)
+    } else {
+        console.log("payment link not found", price)
+    }
 
     /*
     setPriceIdLoading(price.id);
