@@ -44,7 +44,7 @@ export interface Database {
           trial_period_days: number | null
           type: Database["public"]["Enums"]["pricing_type"] | null
           unit_amount: number | null
-          payment_link: string
+          payment_link?: string
         }
         Insert: {
           active?: boolean | null
